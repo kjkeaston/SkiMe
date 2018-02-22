@@ -10,10 +10,11 @@ class Resort extends Component {
     }
   }
 
+// https://skime-api.herokuapp.com/resorts/${resortID}.json
   componentDidMount() {
     // console.log(this.props.match.params.resort_id)
     let resortID = this.props.match.params.resort_id;
-    fetch(`https://skime-api.herokuapp.com/resorts/${resortID}.json`).then( (res) => {
+    fetch(`http://localhost:8080/resorts/${resortID}.json`).then( (res) => {
       return res.json();
     }).then( (oneResort) => {
       this.setState({
@@ -49,6 +50,9 @@ class Resort extends Component {
           )
         })
       }
+      <div>
+      <Link to="/" className="btn btn-outline-primary">Back</Link>
+      </div>
       </div>
     )
   }

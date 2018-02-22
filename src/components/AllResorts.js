@@ -10,9 +10,9 @@ class AllResorts extends Component {
 
     // this.resortSelection = this.resortSelection.bind(this);
   }
-
+// "https://skime-api.herokuapp.com/resorts.json"
   componentDidMount() {
-    fetch("https://skime-api.herokuapp.com/resorts.json").then( (res) => {
+    fetch("http://localhost:8080/resorts.json").then( (res) => {
       return res.json();
     }).then( (resorts) => {
         // console.log(resorts);
