@@ -45,7 +45,7 @@ class Resort extends Component {
       {this.state.allTrails.map((eachTrail) => {
         return(
           <div key={eachTrail.id} className="col-xs-12">
-            <Link to={ `/trails/${eachTrail.id}`} className="btn btn-outline-info">{eachTrail.name}</Link>
+            <Link to={ `/trails/${eachTrail.id}`} className="btn btn-outline-info each-trail-btn">{eachTrail.name}</Link>
           </div>
           )
         })

@@ -32,7 +32,7 @@ class AllResorts extends Component {
       {this.state.allResorts.map((eachResort) => {
         return(
           <div key={eachResort.id} className="col-xs-12">
-            <Link to={ `/resorts/${eachResort.id}`} className="btn btn-outline-info">{eachResort.name}</Link>
+            <Link to={ `/resorts/${eachResort.id}`} className="btn btn-outline-info btn-lg each-resort-btn">{eachResort.name}</Link>
           </div>
           )
         })

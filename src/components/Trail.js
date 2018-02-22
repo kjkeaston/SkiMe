@@ -42,48 +42,26 @@ class Trail extends Component {
           return (
             <div key={eachPost.id} className="col-xs-12">
               <div class="list-group">
-
-        
-          <Link to={ `/posts/${eachPost.id}`} class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1"><strong>Snow Condition:</strong> {eachPost.snow_condition}</h5>
-              <small class="text-muted"><Timestamp time={eachPost.created_at} utc={true} autoUpda te={60} /></small>
-            </div>
-            <p class="mb-1">Overall rating:
-              { Array.from({length: parseInt(eachPost.star_rating)}, (_,i) => i).map(num => {
-                    return (
-                      <i class="far fa-star"></i>
-                    )
-                  })
-              }
-            </p>
-            <small class="text-muted"><strong>Crowd level:</strong> {eachPost.crowd_level}</small>
-          </Link>
-        
+                <Link to={ `/posts/${eachPost.id}`} class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1"><strong>Snow Condition:</strong> {eachPost.snow_condition}</h5>
+                    <small class="text-muted"><Timestamp time={eachPost.created_at} utc={true} autoUpda te={60} /></small>
+                  </div>
+                  <p class="mb-1">Overall rating:
+                    { Array.from({length: parseInt(eachPost.star_rating)}, (_,i) => i).map(num => {
+                          return (
+                            <i class="far fa-star"></i>
+                          )
+                        })
+                    }
+                  </p>
+                  <small class="text-muted"><strong>Crowd level:</strong> {eachPost.crowd_level}</small>
+                </Link>
               </div>
-            </div>
-        )
-        })
-      }
-
-        {this.state.allPosts.map((eachPost) => {
-          return (
-            <div key={eachPost.id} className="col-xs-12">
-              <Link to={ `/posts/${eachPost.id}`} className="btn btn-outline-info">{eachPost.snow_condition}</Link>
-
-              <p>Overall rating:
-                { 
-                  Array.from({length: parseInt(eachPost.star_rating)}, (_,i) => i).map(num => {
-                    return (
-                      <i class="far fa-star"></i>
-                    )
-                  })
-              } </p>
             </div>
             )
           })
         }
-
       </div>
     )
   }
