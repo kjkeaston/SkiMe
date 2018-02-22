@@ -6,30 +6,24 @@ class AllResorts extends Component {
     super();
     this.state = {
       allResorts: [],
-      resortClicked: ""
     }
-    this.resortSelection = this.resortSelection.bind(this);
+
+    // this.resortSelection = this.resortSelection.bind(this);
   }
 
   componentDidMount() {
     fetch("https://skime-api.herokuapp.com/resorts.json").then( (res) => {
       return res.json();
-    }).then( (json) => {
-        console.log(json);
+    }).then( (resorts) => {
+        // console.log(resorts);
       this.setState({
-        allResorts: this.state.allResorts.concat(json)
+        allResorts: this.state.allResorts.concat(resorts)
       });
-      this.state.allResorts.map(eachResort => {
-        console.log(eachResort.name)
-      })
+      // this.state.allResorts.map(eachResort => {
+      //   console.log(eachResort.name)
+      // })
     })
   }
-
-  resortSelection() {
-    
-  }
-
-
 
   render() {
     return (
@@ -41,9 +35,9 @@ class AllResorts extends Component {
             <Link to={ `/resorts/${eachResort.id}`} className="btn btn-outline-info">{eachResort.name}</Link>
           </div>
           )
-      })
-    }
-    </div>
+        })
+      }
+      </div>
     )
   }
 }
