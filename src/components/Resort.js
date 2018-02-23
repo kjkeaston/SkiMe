@@ -14,7 +14,7 @@ class Resort extends Component {
   componentDidMount() {
     // console.log(this.props.match.params.resort_id)
     let resortID = this.props.match.params.resort_id;
-    fetch(`http://localhost:8080/resorts/${resortID}.json`).then( (res) => {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/resorts/${resortID}.json`).then( (res) => {
       return res.json();
     }).then( (oneResort) => {
       this.setState({

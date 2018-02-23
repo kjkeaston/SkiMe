@@ -12,7 +12,7 @@ class AllResorts extends Component {
   }
 // "https://skime-api.herokuapp.com/resorts.json"
   componentDidMount() {
-    fetch("http://localhost:8080/resorts.json").then( (res) => {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/resorts.json`).then( (res) => {
       return res.json();
     }).then( (resorts) => {
         // console.log(resorts);

@@ -34,6 +34,7 @@
   top: 36px;
   right: 36px;
   color: yellowgreen;
+  z-index: 1000;
 }
 
 /*Resort buttons*/

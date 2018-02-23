@@ -15,7 +15,7 @@ class Trail extends Component {
 // https://skime-api.herokuapp.com/trails/${trailID}.json
   componentDidMount() {
     let trailID = this.props.match.params.trail_id;
-    fetch(`http://localhost:8080/trails/${trailID}.json`).then( (res) => {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/trails/${trailID}.json`).then( (res) => {
       return res.json();
     }).then( (oneTrail) => {
       console.log(oneTrail.posts)
