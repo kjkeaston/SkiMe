@@ -7,6 +7,7 @@ class Resort extends Component {
     this.state = {
       currentResortName: "",
       allTrails: [],
+      currentResortObject: {},
     }
   }
 
@@ -19,9 +20,10 @@ class Resort extends Component {
     }).then( (oneResort) => {
       this.setState({
         currentResortName: oneResort.name,
-        allTrails: this.state.allTrails.concat(oneResort.trails)
+        allTrails: this.state.allTrails.concat(oneResort.trails),
+        currentResortObject: oneResort
       })
-      console.log(this.state.allTrails)
+      console.log(this.state.currentResortObject);
       this.setState({
         allTrails: this.state.allTrails.sort((a, b) => {
           let nameA = a.name.toUpperCase();

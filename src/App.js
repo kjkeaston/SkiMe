@@ -9,7 +9,9 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="container">
-          { MyRoutes }
+          <div className="content">
+            { MyRoutes }
+          </div>
         </div>
       </div>
     );

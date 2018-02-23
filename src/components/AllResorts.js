@@ -25,6 +25,10 @@ class AllResorts extends Component {
     })
   }
 
+  selectedResortClicked() {
+    console.log("hello");
+  }
+
   render() {
     return (
       <div className="container">
@@ -32,7 +36,7 @@ class AllResorts extends Component {
       {this.state.allResorts.map((eachResort) => {
         return(
           <div key={eachResort.id} className="col-xs-12">
-            <Link to={ `/resorts/${eachResort.id}`} className="btn btn-outline-info btn-lg each-resort-btn">{eachResort.name}</Link>
+            <Link to={ `/resorts/${eachResort.id}`} onClick={this.selectedResortClicked} className="btn btn-outline-info btn-lg each-resort-btn">{eachResort.name}</Link>
           </div>
           )
         })
