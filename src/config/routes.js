@@ -3,14 +3,14 @@ import { Switch, Route } from 'react-router-dom';
 import AllResorts from '../components/AllResorts.js';
 import Resort from '../components/Resort.js';
 import Trail from '../components/Trail.js';
-import AddPostResort from '../components/AddPostResort.js';
+import AddNewPost from '../components/AddNewPost.js';
 
 export default (
   <Switch>
     <Route exact path='/' component={ AllResorts }/>
     <Route exact path='/resorts/:resort_id' component={ Resort }/>
     <Route exact path='/trails/:trail_id' component={ Trail }/>
-    <Route exact path='/addpostresort' component= { AddPostResort } />
+    <Route exact path='/addreview' component= { AddNewPost } />
   </Switch>
   )
  

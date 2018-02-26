@@ -15,7 +15,7 @@ class AllResorts extends Component {
     fetch(`${process.env.REACT_APP_BACKEND_URL}/resorts.json`).then( (res) => {
       return res.json();
     }).then( (resorts) => {
-        // console.log(resorts);
+        console.log(resorts);
       this.setState({
         allResorts: this.state.allResorts.concat(resorts)
       });
