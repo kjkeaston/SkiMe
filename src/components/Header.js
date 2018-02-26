@@ -13,7 +13,6 @@ class Header extends Component {
     return(
       <header className="App-header">
         <HamburgerMenu />
-        <img src={logo} className="App-logo" alt="logo" />
         <Link to="/" className="App-title">
           <h1 className="App-title">SkiMe</h1>
         </Link>

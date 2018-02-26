@@ -11,9 +11,7 @@ class Resort extends Component {
     }
   }
 
-// https://skime-api.herokuapp.com/resorts/${resortID}.json
   componentDidMount() {
-    // console.log(this.props.match.params.resort_id)
     let resortID = this.props.match.params.resort_id;
     fetch(`${process.env.REACT_APP_BACKEND_URL}/resorts/${resortID}.json`).then( (res) => {
       return res.json();
@@ -43,7 +41,7 @@ class Resort extends Component {
   render() {
     return (
       <div className="container">
-      <h1>{this.state.currentResortName}</h1>
+      <h1 className="page-title">{this.state.currentResortName}</h1>
       {this.state.allTrails.map((eachTrail) => {
         return(
           <div key={eachTrail.id} className="col-xs-12">

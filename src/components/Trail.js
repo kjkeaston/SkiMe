@@ -36,8 +36,7 @@ class Trail extends Component {
   render() {
     return (
       <div className="container">
-      <button onClick={this.testFunction} className="btn btn-outline-warning">Tester Button</button>
-        <h1>{this.state.currentTrailName}</h1>
+        <h1 className="page-title">{this.state.currentTrailName}</h1>
         
         {this.state.allPosts.map((eachPost) => {
           return (
@@ -45,12 +44,12 @@ class Trail extends Component {
               <div className="list-group">
                 <Link to={ `/posts/${eachPost.id}`} className="list-group-item list-group-item-action flex-column align-items-start">
                   <div className="d-flex w-100 justify-content-between">
-                    <h5 className="mb-1"><strong>Snow Condition:</strong> {eachPost.snow_condition}</h5>
+                    <h4><strong>Snow Condition:</strong> {eachPost.snow_condition}</h4>
                     <small className="text-muted"><Timestamp time={eachPost.created_at} utc={true} autoUpda te={60} /></small>
                   </div>
-                  <p className="mb-1">Overall rating:</p>
-                  <ReactStars count={5} size={50} color2={'#ffd700'} half={false} edit={false} value={parseInt(eachPost.star_rating)}/>
-                  <small className="text-muted"><strong>Crowd level:</strong> {eachPost.crowd_level}</small>
+                  <p className="text-muted crowd-level"><strong>Crowd level:</strong> {eachPost.crowd_level}</p>
+                  <h5 className="mb-1 star-rating text-left">Overall rating:</h5>
+                  <ReactStars count={5} size={50} color1={'#979799'} color2={'#FAC021'} half={false} edit={false} value={parseInt(eachPost.star_rating)}/>
                 </Link>
               </div>
             </div>

@@ -10,7 +10,6 @@ class AllResorts extends Component {
 
     // this.resortSelection = this.resortSelection.bind(this);
   }
-// "https://skime-api.herokuapp.com/resorts.json"
   componentDidMount() {
     fetch(`${process.env.REACT_APP_BACKEND_URL}/resorts.json`).then( (res) => {
       return res.json();
@@ -19,9 +18,6 @@ class AllResorts extends Component {
       this.setState({
         allResorts: this.state.allResorts.concat(resorts)
       });
-      // this.state.allResorts.map(eachResort => {
-      //   console.log(eachResort.name)
-      // })
     })
   }
 
@@ -32,7 +28,7 @@ class AllResorts extends Component {
   render() {
     return (
       <div className="container">
-      <h1>Select a Resort</h1>
+      <h1 className="page-title">Select a Resort</h1>
       {this.state.allResorts.map((eachResort) => {
         return(
           <div key={eachResort.id} className="col-xs-12">

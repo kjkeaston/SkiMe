@@ -8,6 +8,12 @@ class AddNewPost extends Component {
     this.state = {
       allResorts: [],
       trailsFromUserSelectionOfResort: [],
+      // newPostResort: "",
+      // newPostTrailID: "",
+      // newPostSnowCondition: "",
+      // newPostCrowdLevel: "",
+      // newPostStarRating: "",
+      // newPostNotes: "",
     }
 
     this.userSelectedResort = this.userSelectedResort.bind(this);
@@ -38,6 +44,7 @@ class AddNewPost extends Component {
     }).then( (oneResort) => {
       // console.log(oneResort.trails);
       this.setState({
+        newPostResort: oneResort,
         trailsFromUserSelectionOfResort: oneResort.trails
       })
       this.setState({
@@ -106,12 +113,17 @@ class AddNewPost extends Component {
 
 
   render() {
-    const ratingChanged = (newRating) => {
-      console.log(newRating)
-    }
+    // const ratingChanged = (newRating) => {
+    //   console.log(newRating)
+    // }
+   
+    // if (this.state.newPostResort !== "" && this.state.newPostTrailID !== "" && this.state.newPostSnowCondition !== "" && this.state.newPostCrowdLevel !== "" && this.state.newPostStarRating !== "") {
+    //   console.log("all filled");
+    // }
+
     return (
       <div>
-        <h1>Add a trail review</h1>
+        <h1 className="page-title">Add a trail review</h1>
 
         <form className="text-left" onSubmit={this.submitPost}>
           <div className="form-group">
@@ -177,10 +189,11 @@ class AddNewPost extends Component {
             <ReactStars
               count={5}
               size={50}
-              color2={'#ffd700'}
+              color1={'#979799'}
+              color2={'#FAC021'}
               half={false}
               value={this.state.newPostStarRating}
-              onChange={this.userSelectedStarRating} />
+              onChange={this.userSelectedStarRating}/>
           </div>
 
           <div className="form-group">
@@ -207,3 +220,4 @@ class AddNewPost extends Component {
 }
 
 export default AddNewPost;
+// default star yellow color color2={'#ffd700'}
