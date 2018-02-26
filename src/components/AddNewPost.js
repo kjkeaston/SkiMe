@@ -102,7 +102,7 @@ class AddNewPost extends Component {
         crowd_level: this.state.newPostCrowdLevel,
         star_rating: this.state.newPostStarRating,
         notes: this.state.newPostNotes,
-        user_id: 81
+        // user_id: 81
       })
     }).then( (res) => {
       return res.json()

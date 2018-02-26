@@ -54,10 +54,10 @@ class Trail extends Component {
               </div>
               )
             })
-          ) : (
+          ) : ( 
             <div>
               <h3>Sorry, no trail reviews yet for {this.state.currentTrailName}.</h3>
-              <h3>Add one to keep fellow shredders updated!</h3>
+              <h3>Add a review to keep fellow shredders updated!</h3>
             </div>
           )
         }

@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  font-family: 'Audiowide', cursive;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .App-header {
@@ -15,6 +16,7 @@
 .App-title {
   font-size: 60px;
   color: white;
+  padding-top: 15px;
 }
 
 .App-title:hover {
@@ -80,7 +82,7 @@
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 25px;
+  top: 32px;
 }
 
 /* Color/shape of burger icon bars */
