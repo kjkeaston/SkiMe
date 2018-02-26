@@ -102,7 +102,7 @@ class AddNewPost extends Component {
         crowd_level: this.state.newPostCrowdLevel,
         star_rating: this.state.newPostStarRating,
         notes: this.state.newPostNotes,
-        user_id: 52
+        user_id: 81
       })
     }).then( (res) => {
       return res.json()
@@ -127,7 +127,7 @@ class AddNewPost extends Component {
 
         <form className="text-left" onSubmit={this.submitPost}>
           <div className="form-group">
-            <label htmlFor="select-resort">Select a resort</label>
+            <label htmlFor="select-resort">Select a resort <small className="required-asterisk">*</small></label>
             <select
               className="form-control form-control-lg"
               id="select-resort"
@@ -141,7 +141,7 @@ class AddNewPost extends Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="select-trail">Select a trail</label>
+            <label htmlFor="select-trail">Select a trail <small className="required-asterisk">*</small></label>
             <select
               className="form-control form-control-lg"
               id="select-trail"
@@ -156,7 +156,7 @@ class AddNewPost extends Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="snow-condition">How was the snow?</label>
+            <label htmlFor="snow-condition">How was the snow? <small className="required-asterisk">*</small></label>
             <select
               className="form-control form-control-lg"
               id="snow-condition"
@@ -171,7 +171,7 @@ class AddNewPost extends Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="crowd-level">Crowd level?</label>
+            <label htmlFor="crowd-level">Crowd level? <small className="required-asterisk">*</small></label>
             <select
               className="form-control form-control-lg"
               id="crowd-level"
@@ -185,7 +185,7 @@ class AddNewPost extends Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="star-rating">Overall rating?</label>
+            <label htmlFor="star-rating">Overall rating? <small className="required-asterisk">*</small></label>
             <ReactStars
               count={5}
               size={50}
