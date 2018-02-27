@@ -1,87 +1,44 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
 A README.md file with:
  Link to your hosted app.
- Paragraph-long description (or elevator pitch) of your project.
- List of technologies used.
- List of installation and setup steps for the app itself and any dependencies - how would another developer run your site locally?
  Link to user stories
  Link to wireframes
  Link to entity relationship diagrams
  List of unsolved problems or future features.
  
-#About
-One of the issues with skiing is that you don’t know the snow conditions on any given trail at any given time until you actually ski down the run. What this means is that if a run is really iced up or has poor snow coverage, you won’t know until you are already on your way down the mountain, and at that point, it is too late to turn back. This app aims to solve that problem by providing an interface for users to give real-time updates of trail conditions. The app is tailored for mobile browsers with a simple UI and big buttons to hopefully prevent click errors when navigating with gloves on.
+# About
+**SkiMe** - One of the issues with skiing is that you don’t know the snow conditions on any given trail at any given time until you actually ski down the run. What this means is that if a run is really iced up or has poor snow coverage, you won’t know until you are already on your way down the mountain, and at that point, it is too late to turn back. This app aims to solve that problem by providing an interface for users to give real-time updates of trail conditions. The app is tailored for mobile browsers with a simple UI and big buttons to hopefully prevent click errors when navigating with gloves on.
 
 ## Technologies Used:
-  * Frontend - HTML/CSS/Javascript/Bootstrap/React
-  * Backend - Ruby on Rails
-  * Database - PostgresQL
+* Frontend - HTML/CSS/Javascript/Bootstrap/React
+* Backend - Ruby on Rails
+* Database - PostgresQL
 
- ##Access
- FE
- BE
+## Access
+ * [FE Github](https://github.com/kjkeaston/SkiMe) / [Heroku](https://ski-me.herokuapp.com/)
+ * [BE Github](https://github.com/kjkeaston/SkiMe-api)
  
 ## Dependencies
-Information about dependencies can be found in package.json for the frontend and in the Gemfile for the backend
-FE non-standard dependencies include:
-    bootstrap
-    jquery
-    popper.js 
-    react-burger-menu
-    react-router-dom
-    react-stars
-    react-timestamp
+* [react-burger-menu](https://www.npmjs.com/package/react-burger-menu)
+* [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+* [react-stars](https://www.npmjs.com/package/react-stars)
+* [react-timestamp](https://www.npmjs.com/package/react-timestamp)
+* [bootstrap](https://getbootstrap.com/docs/4.0/getting-started/download/#npm)
+
+Additional information about dependencies can be found in package.json for the frontend and in the Gemfile for the backend. *Be sure to run `npm install` and `bundle install` for the respective environment*
+
+## Misc.
+User stories, ERD and sprints can be found at [SkiMe Planning](https://docs.google.com/document/d/15cgaK5j1A_OZDtIFn_dI-0Qt21Q_IZt3b7RPJG8elDA/edit)
  
- User stories
- 
- ERD
- 
- Wireframes
- 
- Planned features
+## Planned Features
+* Add more resorts
+* A search bar at the top of the trails list for users to search by trail name
+* A view with runs corresponding to a given chair lift
+* A logged in user experience 
 
 
 
-## Sending Feedback
 
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
-
-## Folder Structure
-
-After creation, your project should look like this:
-
-```
-my-app/
-  README.md
-  node_modules/
-  package.json
-  public/
-    index.html
-    favicon.ico
-  src/
-    App.css
-    App.js
-    App.test.js
-    index.css
-    index.js
-    logo.svg
-```
-
-For the project to build, **these files must exist with exact filenames**:
-
-* `public/index.html` is the page template;
-* `src/index.js` is the JavaScript entry point.
-
-You can delete or rename the other files.
-
-You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.<br>
-You need to **put any JS and CSS files inside `src`**, otherwise Webpack won’t see them.
-
-Only files inside `public` can be used from `public/index.html`.<br>
-Read instructions below for using assets from JavaScript and HTML.
-
-You can, however, create more top-level directories.<br>
-They will not be included in the production build so you can use them for things like documentation.
+### Sending Feedback
+We are always open to [your feedback](https://github.com/kjkeaston/SkiMe/issues).
