@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Green from './green.png';
+import Blue from './blue.png';
+import Black from './black.png';
+import DoubleBlack from './double-black.png';
 
 class Resort extends Component {
   constructor() {
@@ -39,13 +43,25 @@ class Resort extends Component {
   }
 
   render() {
+
+    const pngsObj = {
+        "green": Green,
+        "blue": Blue,
+        "black": Black,
+        "double-black": DoubleBlack,
+      }
+
     return (
       <div className="container">
       <h1 className="page-title">{this.state.currentResortName}</h1>
       {this.state.allTrails.map((eachTrail) => {
         return(
           <div key={eachTrail.id} className="col-xs-12">
-            <Link to={ `/trails/${eachTrail.id}`} className="btn btn-outline-info each-trail-btn">{eachTrail.name}</Link>
+            <Link 
+              to={ `/trails/${eachTrail.id}`} 
+              className="btn btn-outline-info each-trail-btn">
+                {eachTrail.name} <img className="difficulty" src={pngsObj[eachTrail.difficulty]} />
+            </Link>
           </div>
           )
         })

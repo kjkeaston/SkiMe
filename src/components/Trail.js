@@ -11,7 +11,6 @@ class Trail extends Component {
       currentTrailName: "",
       allPosts: [],
     }
-    this.testFunction = this.testFunction.bind(this);
   }
 
   componentDidMount() {
@@ -25,11 +24,6 @@ class Trail extends Component {
         allPosts: this.state.allPosts.concat(oneTrail.posts)
       })
     });
-  }
-
-  testFunction() {
-    this.state.allPosts.map(eachPost => {
-      });
   }
 
   render() {
@@ -56,8 +50,8 @@ class Trail extends Component {
             })
           ) : ( 
             <div>
-              <h3>Sorry, no trail reviews yet for {this.state.currentTrailName}.</h3>
-              <h3>Add a review to keep fellow shredders updated!</h3>
+              <h4>Sorry, no trail reviews yet for {this.state.currentTrailName}.</h4>
+              <h4>Add a review to keep fellow shredders updated!</h4>
             </div>
           )
         }
