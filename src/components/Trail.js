@@ -41,7 +41,7 @@ class Trail extends Component {
                     </div>
                     <p className="text-muted crowd-level"><strong>Crowd level:</strong> {eachPost.crowd_level}</p>
                     <h5 className="mb-1 star-rating text-left">Overall rating:</h5>
-                    <ReactStars count={5} size={50} color1={'#979799'} color2={'#FAC021'} half={false} edit={false} value={parseInt(eachPost.star_rating)}/>
+                    <ReactStars count={5} size={50} color1={'#979799'} color2={'#FAC021'} half={false} edit={false} value={parseInt(eachPost.star_rating, 10)}/>
                     {eachPost.notes !== null ? (
                       <small className="text-muted text-left">Notes: {eachPost.notes}</small>
                       ):(<small className="text-muted text-left"></small>)

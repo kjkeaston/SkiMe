@@ -15,7 +15,7 @@ For anyone who spends time in the mountains, you know how fast conditions can ch
 ## Access
  * [FE Github](https://github.com/kjkeaston/SkiMe) / [Heroku](https://ski-me.herokuapp.com/)
  * [BE Github](https://github.com/kjkeaston/SkiMe-api)
- 
+
 ## Dependencies
 * [react-burger-menu](https://www.npmjs.com/package/react-burger-menu)
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom)
@@ -27,7 +27,10 @@ Additional information about dependencies can be found in package.json for the f
 
 ## Misc.
 User stories, ERD and sprints can be found at [SkiMe Planning](https://docs.google.com/document/d/15cgaK5j1A_OZDtIFn_dI-0Qt21Q_IZt3b7RPJG8elDA/edit)
- 
+
+**Wireframes**
+![wireframes](./public/wireframes.jpg)
+
 ## Planned Features
 * Add more resorts
 * A search bar at the top of the trails list for users to search by trail name
