@@ -29,7 +29,7 @@ Additional information about dependencies can be found in package.json for the f
 User stories, ERD and sprints can be found at [SkiMe Planning](https://docs.google.com/document/d/15cgaK5j1A_OZDtIFn_dI-0Qt21Q_IZt3b7RPJG8elDA/edit)
 
 **Wireframes**
-![wireframes](./public/wireframes.jpg)
+![wireframes](/public/wireframes.jpg)
 
 ## Planned Features
 * Add more resorts
