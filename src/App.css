@@ -60,6 +60,17 @@
   border-color: #5fa5d6;
 }
 
+.cancel-btn {
+  color: #3b4648;
+  border-color: #3b4648;
+  width: 80px;
+}
+
+.cancel-btn:hover {
+  background-color: #3b4648;
+  border-color: #3b4648;
+}
+
 .each-trail-btn {
   margin-bottom: 10px;
   width: 220px;
@@ -77,6 +88,10 @@
 .difficulty {
   width: 20px;
   height: 20px;
+}
+
+.add-review-link {
+  color: #5fa5d6;
 }
 
 /* Position and sizing of burger button */

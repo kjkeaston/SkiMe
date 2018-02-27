@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 
+
 class HamburgerMenu extends Component {
   showSettings (event) {
     event.preventDefault();
@@ -15,9 +16,7 @@ class HamburgerMenu extends Component {
           <a id="add-review" className="menu-item" href="/addreview">Trail review</a>
           <a id="about" className="menu-item" href="/about">About</a>
           <a id="faq" className="menu-item" href="/faq">FAQ</a>
-          <a id="terms-of-use" className="menu-item" href="/termsofuse">Terms of Use</a>
         </Menu>
-        
       </div>
     );
   }

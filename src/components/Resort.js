@@ -5,6 +5,7 @@ import Blue from './blue.png';
 import Black from './black.png';
 import DoubleBlack from './double-black.png';
 
+
 class Resort extends Component {
   constructor() {
     super()
@@ -25,7 +26,6 @@ class Resort extends Component {
         allTrails: this.state.allTrails.concat(oneResort.trails),
         currentResortObject: oneResort
       })
-      console.log(this.state.currentResortObject);
       this.setState({
         allTrails: this.state.allTrails.sort((a, b) => {
           let nameA = a.name.toUpperCase();
@@ -43,8 +43,7 @@ class Resort extends Component {
   }
 
   render() {
-
-    const pngsObj = {
+    const trailDifficultyIcons = {
         "green": Green,
         "blue": Blue,
         "black": Black,
@@ -60,7 +59,7 @@ class Resort extends Component {
             <Link 
               to={ `/trails/${eachTrail.id}`} 
               className="btn btn-outline-info each-trail-btn">
-                {eachTrail.name} <img className="difficulty" src={pngsObj[eachTrail.difficulty]} />
+                {eachTrail.name} <img className="difficulty" alt={eachTrail.difficulty} src={trailDifficultyIcons[eachTrail.difficulty]} />
             </Link>
           </div>
           )

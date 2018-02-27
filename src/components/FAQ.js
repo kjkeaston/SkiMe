@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 class FAQ extends Component {
-  constructor() {
-    super()
-  }
 
   render() {
     return (

@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactStars from 'react-stars';
 
+
 class AddNewPost extends Component {
   constructor() {
     super();
     this.state = {
       allResorts: [],
       trailsFromUserSelectionOfResort: [],
-      // newPostResort: "",
-      // newPostTrailID: "",
-      // newPostSnowCondition: "",
-      // newPostCrowdLevel: "",
-      // newPostStarRating: "",
-      // newPostNotes: "",
     }
 
     this.userSelectedResort = this.userSelectedResort.bind(this);
@@ -29,7 +24,6 @@ class AddNewPost extends Component {
     fetch(`${process.env.REACT_APP_BACKEND_URL}/resorts.json`).then( (res) => {
       return res.json();
     }).then( (resorts) => {
-      console.log(resorts);
       this.setState({
         allResorts: this.state.allResorts.concat(resorts)
       });
@@ -37,12 +31,10 @@ class AddNewPost extends Component {
   }
 
   userSelectedResort(e) {
-    console.log(e.target.value);
     let resortID = e.target.value;
     fetch(`${process.env.REACT_APP_BACKEND_URL}/resorts/${resortID}.json`).then( (res) => {
       return res.json();
     }).then( (oneResort) => {
-      // console.log(oneResort.trails);
       this.setState({
         newPostResort: oneResort,
         trailsFromUserSelectionOfResort: oneResort.trails
@@ -64,27 +56,22 @@ class AddNewPost extends Component {
   }
 
   userSelectedTrail(e) {
-    console.log(e.target.value)
     this.setState({ newPostTrailID: e.target.value })
   }
 
   userSelectedSnowCondition(e) {
-    console.log(e.target.value)
     this.setState({ newPostSnowCondition: e.target.value })
   }
 
   userSelectedCrowdLevel(e) {
-    console.log(e.target.value)
     this.setState({ newPostCrowdLevel: e.target.value })
   }
 
   userSelectedStarRating(e) {
-    console.log(e)
     this.setState({ newPostStarRating: e })
   }
 
   userSelectedNotes(e) {
-    console.log(e.target.value)
     this.setState({ newPostNotes: e.target.value })
   }
 
@@ -102,7 +89,6 @@ class AddNewPost extends Component {
         crowd_level: this.state.newPostCrowdLevel,
         star_rating: this.state.newPostStarRating,
         notes: this.state.newPostNotes,
-        // user_id: 81
       })
     }).then( (res) => {
       return res.json()
@@ -111,20 +97,10 @@ class AddNewPost extends Component {
     })
   }
 
-
   render() {
-    // const ratingChanged = (newRating) => {
-    //   console.log(newRating)
-    // }
-   
-    // if (this.state.newPostResort !== "" && this.state.newPostTrailID !== "" && this.state.newPostSnowCondition !== "" && this.state.newPostCrowdLevel !== "" && this.state.newPostStarRating !== "") {
-    //   console.log("all filled");
-    // }
-
     return (
       <div>
         <h1 className="page-title">Add a trail review</h1>
-
         <form className="text-left" onSubmit={this.submitPost}>
           <div className="form-group">
             <label htmlFor="select-resort">Select a resort <small className="required-asterisk">*</small></label>
@@ -139,7 +115,6 @@ class AddNewPost extends Component {
                 }
             </select>
           </div>
-
           <div className="form-group">
             <label htmlFor="select-trail">Select a trail <small className="required-asterisk">*</small></label>
             <select
@@ -154,7 +129,6 @@ class AddNewPost extends Component {
                 }
             </select>
           </div>
-
           <div className="form-group">
             <label htmlFor="snow-condition">How was the snow? <small className="required-asterisk">*</small></label>
             <select
@@ -169,7 +143,6 @@ class AddNewPost extends Component {
                 <option>Icy, crusty</option>
             </select>
           </div>
-
           <div className="form-group">
             <label htmlFor="crowd-level">Crowd level? <small className="required-asterisk">*</small></label>
             <select
@@ -183,19 +156,17 @@ class AddNewPost extends Component {
               <option>Packed, people everywhere</option>
             </select>
           </div>
-
           <div className="form-group">
             <label htmlFor="star-rating">Overall rating? <small className="required-asterisk">*</small></label>
             <ReactStars
               count={5}
               size={50}
-              color1={'#979799'}
-              color2={'#FAC021'}
+              color1={"#979799"}
+              color2={"#FAC021"}
               half={false}
               value={this.state.newPostStarRating}
               onChange={this.userSelectedStarRating}/>
           </div>
-
           <div className="form-group">
             <label htmlFor="notes">Anything else?</label>
             <textarea 
@@ -205,19 +176,17 @@ class AddNewPost extends Component {
               value={this.newPostNotes}
               onChange={this.userSelectedNotes}></textarea>
           </div>
-
           <div className="form-group">
             <button type="submit" className="btn btn-primary">Send it!</button>
           </div>
         </form>
-         
+        <div className="text-left">
+          <Link to="/" className="btn btn-outline-secondary cancel-btn">Cancel</Link>
+        </div>
+         <br />
       </div>
-
-
-
     )
   }
 }
 
 export default AddNewPost;
-// default star yellow color color2={'#ffd700'}

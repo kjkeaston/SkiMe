@@ -6,6 +6,7 @@ import Trail from '../components/Trail.js';
 import AddNewPost from '../components/AddNewPost.js';
 import Profile from '../components/Profile.js';
 import FAQ from '../components/FAQ.js';
+import About from '../components/About.js';
 
 export default (
   <Switch>
@@ -15,6 +16,7 @@ export default (
     <Route exact path='/addreview' component= { AddNewPost } />
     <Route exact path='/profile' component= { Profile } />
     <Route exact path='/faq' component= { FAQ } />
+    <Route exact path='/about' component= { About } />
   </Switch>
   )
  
