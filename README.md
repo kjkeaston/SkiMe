@@ -1,12 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-A README.md file with:
- Link to your hosted app.
- Link to user stories
- Link to wireframes
- Link to entity relationship diagrams
- List of unsolved problems or future features.
- 
 # About
 **SkiMe** - One of the issues with skiing is that you don’t know the snow conditions on any given trail at any given time until you actually ski down the run. What this means is that if a run is really iced up or has poor snow coverage, you won’t know until you are already on your way down the mountain, and at that point, it is too late to turn back. This app aims to solve that problem by providing an interface for users to give real-time updates of trail conditions. The app is tailored for mobile browsers with a simple UI and big buttons to hopefully prevent click errors when navigating with gloves on.
 
