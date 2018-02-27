@@ -30,8 +30,5 @@ User stories, ERD and sprints can be found at [SkiMe Planning](https://docs.goog
 * A view with runs corresponding to a given chair lift
 * A logged in user experience 
 
-
-
-
 ### Sending Feedback
 We are always open to [your feedback](https://github.com/kjkeaston/SkiMe/issues).
