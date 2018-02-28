@@ -91,10 +91,14 @@ class AddNewPost extends Component {
         notes: this.state.newPostNotes,
       })
     }).then( (res) => {
-      return res.json()
-    }).then( (newlyCreatedPost) => {
-      this.props.history.push(`/trails/${newlyCreatedPost.trail_id}`);
-    })
+      if (res.status === 201) {
+        res.json().then( (newlyCreatedPost) => {
+          this.props.history.push(`/trails/${newlyCreatedPost.trail_id}`);
+        });
+      } else {
+        alert("Oops! Did you select all the required fields?");
+      }
+    });
   }
 
   render() {

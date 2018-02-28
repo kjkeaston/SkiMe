@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
 import { slide as Menu } from 'react-burger-menu';
+import { Link } from 'react-router-dom';
 
 
 class HamburgerMenu extends Component {
-  showSettings (event) {
-    event.preventDefault();
-  }
 
   render () {
     return (
       <div>
-        <Menu>
-          <a id="profile" className="menu-item" href="/profile">Profile</a>
-          <a id="resorts" className="menu-item" href="/">Resorts</a>
-          <a id="add-review" className="menu-item" href="/addreview">Trail review</a>
-          <a id="about" className="menu-item" href="/about">About</a>
-          <a id="faq" className="menu-item" href="/faq">FAQ</a>
+        <Menu isOpen={false}>
+          <Link id="profile" className="menu-item" to="/profile">Profile</Link>
+          <Link id="resorts" className="menu-item" to="/">Resorts</Link>
+          <Link id="add-review" className="menu-item" to="/addreview">Trail review</Link>
+          <Link id="about" className="menu-item" to="/about">About</Link>
+          <Link id="faq" className="menu-item" to="/faq">FAQ</Link>
         </Menu>
       </div>
     );
