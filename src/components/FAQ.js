@@ -11,7 +11,7 @@ class FAQ extends Component {
         <div className="text-left">
           <div>
             <h5><strong>Q:</strong> Who can use SkiMe?</h5>
-            <h5><strong>A:</strong> SkiMe is only for people who like to shred the gnar! If you don’t go full send, get out. Just kidding! Anyone who fancies a day on the slopes is welcome to use the our app. Young and old, new and experienced riders alike!</h5>
+            <h5><strong>A:</strong> SkiMe is only for people who like to shred the gnar! If you don’t go full send, get out. Just kidding! Anyone who fancies a day on the slopes is welcome to use our app. Young and old, new and experienced riders alike!</h5>
           </div>
           <hr />
           <div>

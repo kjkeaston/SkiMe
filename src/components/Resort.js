@@ -53,18 +53,20 @@ class Resort extends Component {
     return (
       <div className="container">
       <h1 className="page-title">{this.state.currentResortName}</h1>
-      {this.state.allTrails.map((eachTrail) => {
-        return(
-          <div key={eachTrail.id} className="col-xs-12">
-            <Link 
-              to={ `/trails/${eachTrail.id}`} 
-              className="btn btn-outline-info each-trail-btn">
-                {eachTrail.name} <img className="difficulty" alt={eachTrail.difficulty} src={trailDifficultyIcons[eachTrail.difficulty]} />
-            </Link>
-          </div>
-          )
-        })
-      }
+      <div className="row">
+        {this.state.allTrails.map((eachTrail) => {
+          return(
+            <div key={eachTrail.id} className="col-xs-12 col-md-6 col-lg-4">
+              <Link 
+                to={ `/trails/${eachTrail.id}`} 
+                className="btn btn-outline-info each-trail-btn">
+                  {eachTrail.name} <img className="difficulty" alt={eachTrail.difficulty} src={trailDifficultyIcons[eachTrail.difficulty]} />
+              </Link>
+            </div>
+            )
+          })
+        }
+      </div>
       <div>
       <Link to="/" className="btn btn-outline-primary">Back</Link>
       </div>

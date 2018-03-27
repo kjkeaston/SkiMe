@@ -81,6 +81,10 @@
   z-index: 1;
 }
 
+/*.list-group-item {
+  margin-bottom: 5px;
+}*/
+
 .required-asterisk {
   color: red;
 }
