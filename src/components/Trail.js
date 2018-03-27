@@ -18,10 +18,10 @@ class Trail extends Component {
     fetch(`${process.env.REACT_APP_BACKEND_URL}/trails/${trailID}.json`).then( (res) => {
       return res.json();
     }).then( (oneTrail) => {
-      console.log(oneTrail);
+      console.log(oneTrail.posts.reverse());
       this.setState({
         currentTrailName: oneTrail.name,
-        allPosts: this.state.allPosts.concat(oneTrail.posts).reverse()
+        allPosts: this.state.allPosts.concat(oneTrail.posts)
       })
     });
   }
