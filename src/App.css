@@ -92,6 +92,7 @@
 .difficulty {
   width: 20px;
   height: 20px;
+  float: left;
 }
 
 .add-review-link {

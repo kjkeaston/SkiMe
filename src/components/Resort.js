@@ -4,6 +4,7 @@ import Green from './green.png';
 import Blue from './blue.png';
 import Black from './black.png';
 import DoubleBlack from './double-black.png';
+import Terrain from './terrain.png';
 
 
 class Resort extends Component {
@@ -48,11 +49,18 @@ class Resort extends Component {
         "blue": Blue,
         "black": Black,
         "double-black": DoubleBlack,
+        "terrain": Terrain,
       }
 
     return (
       <div className="container">
       <h1 className="page-title">{this.state.currentResortName}</h1>
+      <div class="form-group row">
+        <label for="example-search-input" class="col-2 col-form-label">Search</label>
+        <div class="col-10">
+          <input class="form-control" type="search" value="How do I shoot web" id="example-search-input" />
+        </div>
+      </div>
       <div className="row">
         {this.state.allTrails.map((eachTrail) => {
           return(
@@ -60,7 +68,8 @@ class Resort extends Component {
               <Link 
                 to={ `/trails/${eachTrail.id}`} 
                 className="btn btn-outline-info each-trail-btn">
-                  {eachTrail.name} <img className="difficulty" alt={eachTrail.difficulty} src={trailDifficultyIcons[eachTrail.difficulty]} />
+                <img className="difficulty" alt={eachTrail.difficulty} src={trailDifficultyIcons[eachTrail.difficulty]} />
+                  {eachTrail.name} 
               </Link>
             </div>
             )
