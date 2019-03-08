@@ -19,4 +19,3 @@ export default (
     <Route exact path='/about' component= { About } />
   </Switch>
   )
- 
